@@ -1,0 +1,8 @@
+{block content}
+
+<div class="month" n:inner-foreach="$days as $day">
+    <div class="day{if ($iterator->getCounter() - 1) % 7 == 0} clear{/if}{if $day['is-another-month']} another-month-day{else} current-month-day{/if}">
+    <span class="day-numer">{$day['number']}</span>
+    <span class="day-name">{$day['name']}</span>
+    </div>
+</div>
