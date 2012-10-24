@@ -12,9 +12,6 @@ common:
 		# zlib.output_compression: yes
 
 	nette:
-		application:
-			errorPresenter: Error
-
 		database:
 			dsn: 'mysql:host=localhost;dbname=test'
 			user:
@@ -25,8 +22,6 @@ common:
 
 
 	services:
-		authenticator: Authenticator
-
 
 	factories:
 
