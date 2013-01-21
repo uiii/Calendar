@@ -1,8 +1,34 @@
 {block content}
 
-<div class="month" n:inner-foreach="$days as $day">
-    <div class="day{if ($iterator->getCounter() - 1) % 7 == 0} clear{/if}{if $day['is-another-month']} another-month-day{else} current-month-day{/if}">
-    <span class="day-numer">{$day['number']}</span>
-    <span class="day-name">{$day['name']}</span>
+<div id="month">
+    <div class="day-names">
+        <span>Po</span>
+        <span>Út</span>
+        <span>St</span>
+        <span>Čt</span>
+        <span>Pá</span>
+        <span>So</span>
+        <span>Ne</span>
+    </div>
+    <div class="month clear" n:inner-foreach="$days as $day">
+        <div n:class="day, $day->month->number == $month->number ? current-month-day : another-month-day">
+            <span class="day-number">{$day->number}</span>
+        </div>
+        <div n:if="($iterator->getCounter() - 1) % 7 == 6" class="clear"></div>
+    </div>
+    <div class="month-title clear">
+        {var $prevMonth = $month->getPrevious()}
+        {var $nextMonth = $month->getNext()}
+        <div class="month-name">
+            <a n:href="Calendar:month $prevMonth->year->number, $prevMonth->number" class="arrow prev">&lt;</a>
+            {$month}
+            <a n:href="Calendar:month $nextMonth->year->number, $nextMonth->number" class="arrow next">&gt;</a>
+        </div>
+        <div class="month-year">
+            <a n:href="Calendar:month $month->year->getPrevious()->number, $month->number" class="arrow prev">&lt;</a>
+            {$month->year}
+            <a n:href="Calendar:month $month->year->getNext()->number, $month->number" class="arrow next">&gt;</a>
+        </div>
+        <div class="clear"></div>
     </div>
 </div>

@@ -1,0 +1,105 @@
+div#month {
+    color: #777;
+    width: 662px;    
+}
+
+div#month {
+    font-family: 'Trebuchet MS';
+}
+    
+div#month div.month {
+    background-color: #777;
+    width: 658px;
+    padding: 2px;
+}
+
+div#month div.day {
+    margin: 2px;
+}
+
+div#month div.current-month-day {
+    background-color: #EEE;
+}
+
+div#month div.current-month-day:hover {
+    background-color: #DDD;
+}
+
+div#month div.another-month-day {
+    background-color: #BBB;
+}
+
+div#month span.day-name {
+    position: absolute;
+    display: block;
+    font-size: 70pt;
+    left: -13px;
+    bottom: -40px;
+    visibility: hidden;
+}
+
+div#month span.day-number {
+    position: absolute;
+    display: block;
+    font-size: 20pt;
+    font-weight: bold;
+    right: 3px;
+    top: -4px;
+}
+
+div#month div.day-names {
+    position: relative;
+    bottom: -33px;
+    width: 658px;
+    margin: 0 auto;
+}
+
+div#month div.day-names span {
+    display: block;
+    font-size: 50pt;
+    font-weight: bold;
+    float: left;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    margin: 2px;
+}
+
+div#month div.month-title {
+    position: relative;
+    background-color: #777;
+    color: #EEE;
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0px 4px;
+    margin: 4px 0px;
+}
+
+div#month div.month-name {
+    float: left;
+}
+
+div#month div.month-year {
+    float: right;
+}
+
+div#month a.arrow {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 7px;
+    border-color: transparent;
+    overflow: hidden;
+}
+
+div#month a.arrow.prev {
+    border-left-width: 0px;
+    border-right-color: #EEE;
+}
+
+div#month a.arrow.next {
+    border-right-width: 0px;
+    border-left-color: #EEE;
+}

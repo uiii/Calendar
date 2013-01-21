@@ -31,13 +31,9 @@ $configurator->addConfig(__DIR__ . '/config/config.neon');
 $container = $configurator->createContainer();
 
 // Setup router
-$container->router[] = new Route('index.php', 'Calendar:month ' . date("n"), Route::ONE_WAY);
-$container->router[] = new Route('month/<monthNumber>', array(
-    'presenter' => 'Calendar',
-    'action' => 'month',
-    'monthNumber' => date("n")
-));
-
+$container->router[] = new Route('[<yearNumber=' . date('Y') . ' [0-9]+>]', 'Calendar:year');
+$container->router[] = new Route('<yearNumber [0-9]+>/<monthNumber [0-9]+>', 'Calendar:month');
+$container->router[] = new Route('<yearNumber [0-9]+>/<monthNumber [0-9]+>/<dayNumber [0-9]+>', 'Calendar:day');
 
 // Configure and run the application!
 $container->application->run();

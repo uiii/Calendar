@@ -1,0 +1,52 @@
+div#month {
+    width: 646px;    
+    margin: 0 auto;
+}
+
+div#month div.month {
+    background-color: black;
+    width: 644px;
+    padding: 1px;
+    margin: 0 auto;
+}
+
+div#month div.day {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 1px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+div#month div.current-month-day {
+    background-color: white;
+    font-weight: bold;
+}
+
+div#month div.another-month-day {
+    background-color: white;
+}
+
+div#month div.month-title {
+}
+
+div#month div.day-names {
+    position: relative;
+    width: 644px;
+    margin: 0 auto;
+}
+
+div#month div.day-names span {
+    display: block;
+    font-weight: bold;
+    float: left;
+    width: 80px;
+    padding: 5px;
+    margin: 1px;
+}
+
+div.clear {
+    clear: both;
+}
