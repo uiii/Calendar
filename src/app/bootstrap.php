@@ -41,5 +41,7 @@ $container->router[] = new Route('<yearNumber [0-9]+>', 'Calendar:year');
 $container->router[] = new Route('<yearNumber [0-9]+>/<monthNumber [0-9]+>', 'Calendar:month');
 $container->router[] = new Route('<yearNumber [0-9]+>/<monthNumber [0-9]+>/<dayNumber [0-9]+>', 'Calendar:day');
 
+setlocale(LC_ALL, "cs_CZ.utf-8");
+
 // Configure and run the application!
 $container->application->run();
