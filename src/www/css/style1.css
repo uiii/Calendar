@@ -99,7 +99,15 @@ div#month a.arrow.prev {
     border-right-color: #EEE;
 }
 
+div#month a.arrow.prev:hover {
+    border-right-color: #BBB;
+}
+
 div#month a.arrow.next {
     border-right-width: 0px;
     border-left-color: #EEE;
+}
+
+div#month a.arrow.next:hover {
+    border-left-color: #BBB;
 }
