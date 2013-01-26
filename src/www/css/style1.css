@@ -49,16 +49,18 @@ div#month span.day-number {
 
 div#month div.day-names {
     position: relative;
-    bottom: -33px;
     width: 658px;
     margin: 0 auto;
+    margin-top: -10px;
 }
 
 div#month div.day-names span {
+    position: relative;
     display: block;
     font-size: 50pt;
     font-weight: bold;
     float: left;
+    bottom: -33px;
     width: 80px;
     height: 80px;
     padding: 5px;
